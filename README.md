@@ -4,7 +4,7 @@
 
 ```sh
 # start dev server
-$ yarn develop
+$ yarn start
 ```
 
 ## todo
