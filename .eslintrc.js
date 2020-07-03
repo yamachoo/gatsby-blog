@@ -3,9 +3,10 @@ module.exports = {
   extends: [
     "plugin:@typescript-eslint/recommended",
     "plugin:prettier/recommended",
-    "prettier/@typescript-eslint"
+    "prettier/@typescript-eslint",
+    'plugin:react/recommended'
   ],
-  plugins: ["@typescript-eslint", "prettier"],
+  plugins: ["@typescript-eslint", "prettier", "react"],
   parserOptions: {
     ecmaVersion: 2018,
     sourceType: "module"
@@ -33,5 +34,18 @@ module.exports = {
         singleQuote: false
       }
     ]
+  },
+  overrides: [
+    {
+      files: ["**/*.tsx"],
+      rules: {
+        "react/prop-types": 0
+      }
+    }
+  ],
+  settings: {
+    react: {
+      version: "detect"
+    }
   }
 }
