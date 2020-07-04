@@ -41,6 +41,12 @@ module.exports = {
       rules: {
         "react/prop-types": 0
       }
+    },
+    {
+      files: ["**/*.js"],
+      rules: {
+        "@typescript-eslint/no-var-requires": 0
+      }
     }
   ],
   settings: {

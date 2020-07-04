@@ -1,14 +1,8 @@
-module.exports = {
-  siteMetadata: {
-    title: `Yamablog`
-  },
-  plugins: [
-    `gatsby-plugin-emotion`,
-    {
-      resolve: `gatsby-plugin-graphql-codegen`,
-      options: {
-        fileName: `types/graphql-types.d.ts`
-      }
-    }
-  ]
-}
+require(`ts-node`).register({
+  compilerOptions: {
+    module: `commonjs`,
+    target: `esnext`
+  }
+})
+
+module.exports = require(`./ts-gatsby/gatsby-config.ts`)
