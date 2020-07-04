@@ -5,4 +5,4 @@ require(`ts-node`).register({
   }
 })
 
-module.exports = require(`./ts-gatsby/gatsby-config.ts`)
+module.exports = require(`./gatsby-config.ts`)
