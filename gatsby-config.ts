@@ -29,7 +29,7 @@ export const plugins = [
       background_color: `#EFEFEF`,
       theme_color: `#0F4C81`,
       display: `standalone`,
-      icon: `src/images/icon.png`
+      icon: `static/images/icon.png`
     }
   },
   `gatsby-plugin-offline`,
