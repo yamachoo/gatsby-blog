@@ -599,6 +599,7 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___created'
   | 'childMarkdownRemark___frontmatter___updated'
   | 'childMarkdownRemark___frontmatter___path'
+  | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___excerpt'
   | 'childMarkdownRemark___rawMarkdownBody'
   | 'childMarkdownRemark___fileAbsolutePath'
@@ -868,6 +869,7 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___created'
   | 'frontmatter___updated'
   | 'frontmatter___path'
+  | 'frontmatter___description'
   | 'excerpt'
   | 'rawMarkdownBody'
   | 'fileAbsolutePath'
@@ -992,6 +994,7 @@ export type MarkdownRemarkFrontmatter = {
   created?: Maybe<Scalars['Date']>;
   updated?: Maybe<Scalars['Date']>;
   path?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
 };
 
 
@@ -1015,6 +1018,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   created?: Maybe<DateQueryOperatorInput>;
   updated?: Maybe<DateQueryOperatorInput>;
   path?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
 };
 
 export type MarkdownRemarkGroupConnection = {
@@ -1518,6 +1522,8 @@ export type SiteEdge = {
 export type SiteFieldsEnum = 
   | 'buildTime'
   | 'siteMetadata___title'
+  | 'siteMetadata___description'
+  | 'siteMetadata___author'
   | 'port'
   | 'host'
   | 'polyfill'
@@ -2181,10 +2187,14 @@ export type SitePluginSortInput = {
 
 export type SiteSiteMetadata = {
   title?: Maybe<Scalars['String']>;
+  description?: Maybe<Scalars['String']>;
+  author?: Maybe<Scalars['String']>;
 };
 
 export type SiteSiteMetadataFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  author?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SiteSortInput = {
@@ -2205,6 +2215,11 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type SeoQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type SeoQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
+
 export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -2217,5 +2232,5 @@ export type BlogTemplateQueryVariables = Exact<{
 
 export type BlogTemplateQuery = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'html'>
-    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'created' | 'updated' | 'path'>> }
+    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'created' | 'updated' | 'path' | 'description'>> }
   )> };

@@ -1,5 +1,7 @@
 export const siteMetadata = {
-  title: `Yamablog`
+  title: `Yamablog`,
+  description: `@yamachooのブログです。勉強した内容や興味のあること等をアウトプットの一環として発信します。`,
+  author: `@yamachoo`
 }
 
 export const plugins = [
@@ -30,5 +32,6 @@ export const plugins = [
       icon: `src/images/icon.png`
     }
   },
-  `gatsby-plugin-offline`
+  `gatsby-plugin-offline`,
+  `gatsby-plugin-react-helmet`
 ]

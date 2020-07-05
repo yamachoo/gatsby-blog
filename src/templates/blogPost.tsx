@@ -1,6 +1,7 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import { BlogTemplateQuery } from "../../types/graphql-types"
 
 interface IProps {
@@ -12,13 +13,23 @@ const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
 
   return (
     <Layout>
-      {post && post.html && post.frontmatter ? (
-        <div>
-          <h1>{post.frontmatter.title}</h1>
-          <p>{post.frontmatter.created}</p>
-          <p>{post.frontmatter.updated}</p>
-          <div dangerouslySetInnerHTML={{ __html: post.html }} />
-        </div>
+      {post &&
+      post.html &&
+      post.frontmatter &&
+      post.frontmatter.title &&
+      post.frontmatter.description ? (
+        <>
+          <SEO
+            title={post.frontmatter.title}
+            description={post.frontmatter.description}
+          />
+          <div>
+            <h1>{post.frontmatter.title}</h1>
+            <p>{post.frontmatter.created}</p>
+            <p>{post.frontmatter.updated}</p>
+            <div dangerouslySetInnerHTML={{ __html: post.html }} />
+          </div>
+        </>
       ) : (
         `ERROR`
       )}
@@ -35,6 +46,7 @@ export const pageQuery = graphql`
         created(formatString: "YYYY-MM-DD")
         updated(formatString: "YYYY-MM-DD")
         path
+        description
       }
     }
   }
