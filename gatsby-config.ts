@@ -17,5 +17,17 @@ export const plugins = [
     options: {
       fileName: `types/graphql-types.d.ts`
     }
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: `Yamablog`,
+      short_name: `Yamablog`,
+      start_url: `/`,
+      background_color: `#EFEFEF`,
+      theme_color: `#0F4C81`,
+      display: `standalone`,
+      icon: `src/images/icon.png`
+    }
   }
 ]
