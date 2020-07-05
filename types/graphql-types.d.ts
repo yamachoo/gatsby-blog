@@ -2225,12 +2225,12 @@ export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type IndexQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
-export type BlogTemplateQueryVariables = Exact<{
+export type BlogPostQueryVariables = Exact<{
   path: Scalars['String'];
 }>;
 
 
-export type BlogTemplateQuery = { markdownRemark?: Maybe<(
+export type BlogPostQuery = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'created' | 'updated' | 'path' | 'description'>> }
   )> };

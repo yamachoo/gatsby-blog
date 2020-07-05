@@ -2,10 +2,10 @@ import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { BlogTemplateQuery } from "../../types/graphql-types"
+import { BlogPostQuery } from "../../types/graphql-types"
 
 interface IProps {
-  data: BlogTemplateQuery
+  data: BlogPostQuery
 }
 
 const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
@@ -38,7 +38,7 @@ const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query BlogTemplate($path: String!) {
+  query BlogPost($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
