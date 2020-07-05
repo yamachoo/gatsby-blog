@@ -29,5 +29,6 @@ export const plugins = [
       display: `standalone`,
       icon: `src/images/icon.png`
     }
-  }
+  },
+  `gatsby-plugin-offline`
 ]
