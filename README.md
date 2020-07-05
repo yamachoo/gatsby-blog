@@ -10,7 +10,7 @@ $ yarn start
 ## todo
 
 - [x] TypeScript
-- [ ] tutorial part
+- [x] tutorial part
 - [ ] gatsby-image
 - [ ] SEO
 - [ ] analytics
