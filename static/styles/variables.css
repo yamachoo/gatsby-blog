@@ -1,0 +1,10 @@
+:root {
+  --theme-color: #0F4C81;
+  --background-primary: ##FFFFFF;
+  --background-secondary: ##EFEFEF;
+  --color: #2E2E2E;
+  --outline-color: #FFFFFF;
+  --font: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans",
+  Meiryo, sans-serif;
+  --font-strong: "Arial Black", "Arial Bold", Gadget, sans-serif;
+}
