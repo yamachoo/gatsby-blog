@@ -1,0 +1,42 @@
+.header {
+  background: var(--theme-color);
+  color: var(--outline-color);
+}
+
+.layout {
+  max-width: 1440px;
+  padding: 0 12px;
+  height: 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-size: 24px;
+  font-family: var(--font-strong);
+  margin-bottom: 2px
+}
+
+.icon {
+  margin-left: 8px;
+}
+
+@media screen and (min-width: 560px) {
+  .layout {
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 64px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .icon {
+    margin-left: 16px;
+  }
+  .icon img {
+    height: 32px;
+  }
+}
