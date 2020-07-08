@@ -5,11 +5,11 @@ import { SeoQuery } from "../../types/graphql-types"
 
 interface IProps {
   description?: string
-  meta?: Meta[]
+  meta?: IMeta[]
   title: string
 }
 
-interface Meta {
+interface IMeta {
   name: string
   content: string
 }
@@ -29,6 +29,8 @@ const SEO: React.FC<IProps & SeoQuery> = ({ description, meta, title }) => {
     `
   )
 
+  const siteTitle = site.siteMetadata.title
+  const author = site.siteMetadata.author
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -37,7 +39,7 @@ const SEO: React.FC<IProps & SeoQuery> = ({ description, meta, title }) => {
         lang: `ja`
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={title !== siteTitle ? `%s | ${siteTitle}` : siteTitle}
       meta={[
         {
           name: `description`,
@@ -61,7 +63,7 @@ const SEO: React.FC<IProps & SeoQuery> = ({ description, meta, title }) => {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author
+          content: author
         },
         {
           name: `twitter:title`,
