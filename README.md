@@ -4,15 +4,17 @@
 
 ```sh
 # start dev server
-$ yarn start
+$ yarn dev
 ```
 
 ## todo
 
 - [x] TypeScript
 - [x] tutorial part
+- [ ] design
 - [ ] gatsby-image
+- [ ] prism
 - [ ] SEO
 - [ ] analytics
+- [ ] dark mode
 - [ ] MDX
-- [ ] prism
