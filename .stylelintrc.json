@@ -1,10 +1,10 @@
 {
   "extends": [
+    "stylelint-config-recess-order",
     "stylelint-config-standard-scss",
     "stylelint-prettier/recommended"
   ],
   "ignoreFiles": [
-    ".cache/**/*.scss",
     "node_modules/**/*.scss",
     "public/**/*.scss",
     "static/styles/_reset.scss"
