@@ -4,6 +4,7 @@
   margin-bottom: 16px;
   color: $outline-color;
   background: $theme-color;
+  box-shadow: $shadow;
 
   @include mq() {
     margin-bottom: 24px;
