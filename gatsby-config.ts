@@ -13,7 +13,6 @@ export const plugins = [
     }
   },
   `gatsby-transformer-remark`,
-  `gatsby-plugin-emotion`,
   {
     resolve: `gatsby-plugin-graphql-codegen`,
     options: {
