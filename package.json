@@ -11,7 +11,9 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "type": "tsc --noEmit",
-    "lint": "eslint . --ext .ts,.tsx,.js --fix"
+    "lint:ts": "eslint . --ext .ts,.tsx,.js --fix",
+    "lint:scss": "stylelint ./**/*.scss --fix",
+    "lint": "yarn lint:ts && yarn lint:scss"
   },
   "dependencies": {
     "gatsby": "^2.23.18",
@@ -40,6 +42,11 @@
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "prettier": "^2.0.5",
+    "stylelint": "^13.6.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard-scss": "^1.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0",
     "ts-node": "^8.10.2",
     "typescript": "^3.9.5"
   }
