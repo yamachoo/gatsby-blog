@@ -1,50 +1,47 @@
 @import "../../static/styles/variables";
 
 .header {
-  background: $theme-color;
-  color: $outline-color;
   margin-bottom: 16px;
+  color: $outline-color;
+  background: $theme-color;
+
+  @include mq() {
+    margin-bottom: 24px;
+  }
 }
 
 .layout {
-  max-width: 1440px;
-  padding: 0 12px;
-  height: 48px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  max-width: 1440px;
+  height: 48px;
+  padding: 0 12px;
+
+  @include mq() {
+    height: 64px;
+    padding: 0 32px;
+    margin: 0 auto;
+  }
 }
 
 .title {
-  font-size: 24px;
-  font-family: $font-strong;
   margin-bottom: 2px;
+  font-family: $font-strong;
+  font-size: 24px;
+
+  @include mq() {
+    font-size: 32px;
+  }
 }
 
 .icon {
   margin-left: 8px;
-}
 
-@media screen and (min-width: 560px) {
-  .header {
-    margin-bottom: 24px;
-  }
-
-  .layout {
-    margin: 0 auto;
-    padding: 0 32px;
-    height: 64px;
-  }
-
-  .title {
-    font-size: 32px;
-  }
-
-  .icon {
+  @include mq() {
     margin-left: 16px;
-  }
-
-  .icon img {
-    height: 32px;
+    img {
+      height: 32px;
+    }
   }
 }
