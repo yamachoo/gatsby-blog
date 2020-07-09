@@ -1,6 +1,8 @@
+@import "../../static/styles/variables";
+
 .header {
-  background: var(--theme-color);
-  color: var(--outline-color);
+  background: $theme-color;
+  color: $outline-color;
   margin-bottom: 16px;
 }
 
@@ -15,7 +17,7 @@
 
 .title {
   font-size: 24px;
-  font-family: var(--font-strong);
+  font-family: $font-strong;
   margin-bottom: 2px;
 }
 

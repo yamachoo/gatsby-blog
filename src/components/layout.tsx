@@ -1,14 +1,14 @@
 import React from "react"
-import style from "./layout.module.css"
+import styles from "./layout.module.scss"
 import Header from "./header"
 import Footer from "./footer"
-import "../../static/styles/global.css"
+import "../../static/styles/global.scss"
 
 const Layout: React.FC = ({ children }) => {
   return (
-    <div className={style.layout}>
+    <div className={styles.layout}>
       <Header />
-      <div className={style.content}>{children}</div>
+      <div className={styles.content}>{children}</div>
       <Footer />
     </div>
   )

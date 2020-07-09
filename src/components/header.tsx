@@ -1,18 +1,18 @@
 import React from "react"
 import { Link } from "gatsby"
-import style from "./header.module.css"
+import styles from "./header.module.scss"
 import twitter from "../../static/images/twitter_outline.svg"
 import github from "../../static/images/github_outline.svg"
 
 const Header: React.FC = () => (
-  <header className={style.header}>
-    <div className={style.layout}>
-      <h1 className={style.title}>
+  <header className={styles.header}>
+    <div className={styles.layout}>
+      <h1 className={styles.title}>
         <Link to="/">Yamablog</Link>
       </h1>
       <div>
         <a
-          className={style.icon}
+          className={styles.icon}
           href="https://twitter.com/yamachoo567"
           target="_blank"
           rel="noopener noreferrer"
@@ -20,7 +20,7 @@ const Header: React.FC = () => (
           <img src={twitter} alt="twitter-logo" />
         </a>
         <a
-          className={style.icon}
+          className={styles.icon}
           href="https://github.com/yamachoo"
           target="_blank"
           rel="noopener noreferrer"

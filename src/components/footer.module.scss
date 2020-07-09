@@ -1,0 +1,17 @@
+@import "../../static/styles/variables";
+
+.footer {
+  background: $theme-color;
+  color: $outline-color;
+  text-align: center;
+  margin-top: 48px;
+  padding: 16px;
+}
+
+.footer p {
+  margin: 8px;
+}
+
+.footer a {
+  color: $color-link;
+}

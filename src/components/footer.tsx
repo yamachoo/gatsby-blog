@@ -1,8 +1,8 @@
 import React from "react"
-import style from "./footer.module.css"
+import styles from "./footer.module.scss"
 
 const Footer: React.FC = () => (
-  <footer className={style.footer}>
+  <footer className={styles.footer}>
     <p>
       © {new Date().getFullYear()} Yamabolg, built with{` `}
       <a

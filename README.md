@@ -12,7 +12,7 @@ $ yarn dev
 - [x] TypeScript
 - [x] tutorial part
 - [ ] design
-- [ ] SCSS
+- [x] SCSS
 - [ ] gatsby-image
 - [ ] prism
 - [ ] SEO
