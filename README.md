@@ -13,7 +13,7 @@ $ yarn dev
 - [x] tutorial part
 - [ ] design
 - [x] SCSS
-- [ ] gatsby-image
+- [x] gatsby-image
 - [ ] prism
 - [ ] SEO
 - [ ] analytics

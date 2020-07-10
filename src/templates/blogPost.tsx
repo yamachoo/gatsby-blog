@@ -1,11 +1,28 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
+import { FluidObject } from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { BlogPostQuery } from "../../types/graphql-types"
 
 interface IProps {
-  data: BlogPostQuery
+  data: {
+    markdownRemark: {
+      html: string
+      frontmatter: {
+        title: string
+        created: string
+        updated: string
+        path: string
+        description: string
+        visual: {
+          childImageSharp: {
+            fluid: FluidObject
+          }
+        }
+      }
+    }
+  }
 }
 
 const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
@@ -13,32 +30,23 @@ const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
 
   return (
     <Layout>
-      {post &&
-      post.html &&
-      post.frontmatter &&
-      post.frontmatter.title &&
-      post.frontmatter.description ? (
-        <>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.frontmatter.description}
-          />
-          <div>
-            <h1>{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.created}</p>
-            <p>{post.frontmatter.updated}</p>
-            <div dangerouslySetInnerHTML={{ __html: post.html }} />
-          </div>
-        </>
-      ) : (
-        `ERROR`
+      <SEO
+        title={post.frontmatter.title}
+        description={post.frontmatter.description}
+      />
+      <h1>{post.frontmatter.title}</h1>
+      <p>{post.frontmatter.created}</p>
+      <p>{post.frontmatter.updated}</p>
+      {post.frontmatter.visual?.childImageSharp?.fluid && (
+        <Img fluid={post.frontmatter.visual.childImageSharp.fluid} />
       )}
+      <div dangerouslySetInnerHTML={{ __html: post.html }} />
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query BlogPost($path: String!) {
+  query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       html
       frontmatter {
@@ -47,6 +55,13 @@ export const pageQuery = graphql`
         updated(formatString: "YYYY-MM-DD")
         path
         description
+        visual {
+          childImageSharp {
+            fluid(maxWidth: 900, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }

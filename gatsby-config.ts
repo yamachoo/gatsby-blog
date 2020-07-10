@@ -12,8 +12,24 @@ export const plugins = [
       path: `${__dirname}/src/posts`
     }
   },
-  `gatsby-transformer-remark`,
+  `gatsby-transformer-sharp`,
+  {
+    resolve: `gatsby-transformer-remark`,
+    options: {
+      plugins: [
+        {
+          resolve: `gatsby-remark-images`,
+          options: {
+            maxWidth: 900,
+            quality: 100,
+            linkImagesToOriginal: false
+          }
+        }
+      ]
+    }
+  },
   `gatsby-plugin-sass`,
+  `gatsby-plugin-sharp`,
   {
     resolve: `gatsby-plugin-graphql-codegen`,
     options: {
