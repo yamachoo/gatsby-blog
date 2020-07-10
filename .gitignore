@@ -1,3 +1,7 @@
+# Original
+src/posts/**/*.jpg
+src/posts/**/*.png
+
 # Logs
 logs
 *.log
