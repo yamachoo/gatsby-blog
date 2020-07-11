@@ -39,7 +39,7 @@ piyo
 
 ## Code コード
 
-```
+```c
 print 'hoge'
 ```
 
@@ -126,3 +126,7 @@ hoge
 |:---|:---:|---:|
 |1 |2 |3 |
 |4 |5 |6 |
+
+```js:title=example-file.js
+alert('how cool is this!');
+```
