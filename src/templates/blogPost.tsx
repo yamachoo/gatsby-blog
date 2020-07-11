@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Img from "gatsby-image"
-import { FluidObject } from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Eyecatch from "../components/eyecatch"
+import { IFluid } from "../components/eyecatch"
 
 interface IProps {
   data: {
@@ -16,9 +16,7 @@ interface IProps {
         path: string
         description: string
         visual: {
-          childImageSharp: {
-            fluid: FluidObject
-          }
+          childImageSharp: IFluid
         }
       }
     }
@@ -34,13 +32,18 @@ const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description}
       />
-      <h1>{post.frontmatter.title}</h1>
-      <p>{post.frontmatter.created}</p>
-      <p>{post.frontmatter.updated}</p>
-      {post.frontmatter.visual?.childImageSharp?.fluid && (
-        <Img fluid={post.frontmatter.visual.childImageSharp.fluid} />
-      )}
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <article>
+        <h1>{post.frontmatter.title}</h1>
+        <p>{post.frontmatter.created}</p>
+        <p>{post.frontmatter.updated}</p>
+        {post.frontmatter.visual?.childImageSharp?.fluid && (
+          <Eyecatch fluid={post.frontmatter.visual.childImageSharp.fluid} />
+        )}
+        <div
+          className="content"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
+      </article>
     </Layout>
   )
 }

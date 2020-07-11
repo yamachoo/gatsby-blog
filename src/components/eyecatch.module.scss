@@ -1,0 +1,9 @@
+@import "../../static/styles/variables";
+
+.eyecatch {
+  margin: 0 -16px;
+
+  @include mq() {
+    margin: 0 -32px;
+  }
+}

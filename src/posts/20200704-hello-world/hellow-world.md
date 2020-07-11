@@ -7,9 +7,8 @@ description: "Hello World!"
 visual: "./sample.jpg"
 ---
 
-# Block Elements
+## Block Elements
 
-# 見出し1
 ## 見出し2
 ### 見出し3
 #### 見出し4
@@ -65,7 +64,7 @@ ___
 hoge
 ---
 
-# Lists
+## Lists
 
 ## Ul 箇条書きリスト
 
@@ -116,7 +115,7 @@ hoge
 
 ![サンプル](./sample.jpg)
 
-# Table 表
+## Table 表
 
 | TH1 | TH2 |
 ----|----
