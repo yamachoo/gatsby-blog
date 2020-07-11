@@ -3027,17 +3027,20 @@ export type SeoQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type SeoQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title' | 'description' | 'author'>> }> };
 
-export type IndexQueryVariables = Exact<{ [key: string]: never; }>;
+export type Unnamed_1_QueryVariables = Exact<{ [key: string]: never; }>;
 
 
-export type IndexQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
+export type Unnamed_1_Query = { allMarkdownRemark: { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'id'>
+        & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'created' | 'path' | 'description'>> }
+      ) }> }, site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'title'>> }> };
 
-export type Unnamed_1_QueryVariables = Exact<{
+export type Unnamed_2_QueryVariables = Exact<{
   path: Scalars['String'];
 }>;
 
 
-export type Unnamed_1_Query = { markdownRemark?: Maybe<(
+export type Unnamed_2_Query = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'html'>
     & { frontmatter?: Maybe<(
       Pick<MarkdownRemarkFrontmatter, 'title' | 'created' | 'updated' | 'path' | 'description'>

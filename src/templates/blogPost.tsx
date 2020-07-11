@@ -21,13 +21,14 @@ interface IProps {
       }
     }
   }
+  path: string
 }
 
-const BlogPostTemplate: React.FC<IProps> = ({ data }) => {
+const BlogPostTemplate: React.FC<IProps> = ({ data, path }) => {
   const post = data.markdownRemark
 
   return (
-    <Layout>
+    <Layout sitePath={path}>
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}

@@ -4,12 +4,22 @@ import styles from "./header.module.scss"
 import twitter from "../../static/images/twitter_outline.svg"
 import github from "../../static/images/github_outline.svg"
 
-const Header: React.FC = () => (
+export interface ISitePath {
+  sitePath: string
+}
+
+const Header: React.FC<ISitePath> = ({ sitePath }) => (
   <header className={styles.header}>
     <div className={styles.layout}>
-      <h1 className={styles.title}>
-        <Link to="/">Yamablog</Link>
-      </h1>
+      {sitePath === `/` ? (
+        <h1 className={styles.title}>
+          <Link to="/">Yamablog</Link>
+        </h1>
+      ) : (
+        <div className={styles.title}>
+          <Link to="/">Yamablog</Link>
+        </div>
+      )}
       <div>
         <a
           className={styles.icon}

@@ -1,25 +1,65 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { IndexQuery } from "../../types/graphql-types"
 
 interface IProps {
-  data: IndexQuery
+  data: {
+    allMarkdownRemark: {
+      edges: {
+        node: {
+          id: string
+          frontmatter: {
+            title: string
+            created: string
+            updated: string
+            path: string
+            description: string
+          }
+        }
+      }[]
+    }
+    site: {
+      siteMetadata: {
+        title: string
+      }
+    }
+  }
+  path: string
 }
 
-const IndexPage: React.FC<IProps> = ({ data }) => {
+const IndexPage: React.FC<IProps> = ({ data, path }) => {
   return (
-    <Layout>
-      <SEO title={data.site?.siteMetadata?.title || `HOME`} />
-      <h1>{data.site?.siteMetadata?.title}</h1>
-      <div>Hello world!</div>
+    <Layout sitePath={path}>
+      <SEO title={data.site.siteMetadata.title || `HOME`} />
+      {data.allMarkdownRemark.edges.map(({ node }) => (
+        <div key={node.id}>
+          <Link to={node.frontmatter.path}>
+            <h2>{node.frontmatter.title}</h2>
+            <p>{node.frontmatter.created}</p>
+            <p>{node.frontmatter.description}</p>
+          </Link>
+        </div>
+      ))}
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
-  query Index {
+  query {
+    allMarkdownRemark {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            created(formatString: "YYYY-MM-DD")
+            path
+            description
+          }
+        }
+      }
+    }
     site {
       siteMetadata {
         title
