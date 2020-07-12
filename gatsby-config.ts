@@ -26,6 +26,13 @@ export const plugins = [
             quality: 100,
             linkImagesToOriginal: false
           }
+        },
+        {
+          resolve: `gatsby-remark-external-links`,
+          options: {
+            target: `_blank`,
+            rel: `noopener noreferrer`
+          }
         }
       ]
     }

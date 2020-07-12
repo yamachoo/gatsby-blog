@@ -2566,6 +2566,8 @@ export type SitePageFieldsEnum =
   | 'pluginCreator___pluginOptions___maxWidth'
   | 'pluginCreator___pluginOptions___quality'
   | 'pluginCreator___pluginOptions___linkImagesToOriginal'
+  | 'pluginCreator___pluginOptions___target'
+  | 'pluginCreator___pluginOptions___rel'
   | 'pluginCreator___pluginOptions___fileName'
   | 'pluginCreator___pluginOptions___short_name'
   | 'pluginCreator___pluginOptions___start_url'
@@ -2773,6 +2775,8 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___plugins___pluginOptions___maxWidth'
   | 'pluginOptions___plugins___pluginOptions___quality'
   | 'pluginOptions___plugins___pluginOptions___linkImagesToOriginal'
+  | 'pluginOptions___plugins___pluginOptions___target'
+  | 'pluginOptions___plugins___pluginOptions___rel'
   | 'pluginOptions___plugins___browserAPIs'
   | 'pluginOptions___plugins___pluginFilepath'
   | 'pluginOptions___name'
@@ -2780,6 +2784,8 @@ export type SitePluginFieldsEnum =
   | 'pluginOptions___maxWidth'
   | 'pluginOptions___quality'
   | 'pluginOptions___linkImagesToOriginal'
+  | 'pluginOptions___target'
+  | 'pluginOptions___rel'
   | 'pluginOptions___fileName'
   | 'pluginOptions___short_name'
   | 'pluginOptions___start_url'
@@ -2914,6 +2920,8 @@ export type SitePluginPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   quality?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  target?: Maybe<Scalars['String']>;
+  rel?: Maybe<Scalars['String']>;
   fileName?: Maybe<Scalars['String']>;
   short_name?: Maybe<Scalars['String']>;
   start_url?: Maybe<Scalars['String']>;
@@ -2936,6 +2944,8 @@ export type SitePluginPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   quality?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  target?: Maybe<StringQueryOperatorInput>;
+  rel?: Maybe<StringQueryOperatorInput>;
   fileName?: Maybe<StringQueryOperatorInput>;
   short_name?: Maybe<StringQueryOperatorInput>;
   start_url?: Maybe<StringQueryOperatorInput>;
@@ -2979,12 +2989,16 @@ export type SitePluginPluginOptionsPluginsPluginOptions = {
   maxWidth?: Maybe<Scalars['Int']>;
   quality?: Maybe<Scalars['Int']>;
   linkImagesToOriginal?: Maybe<Scalars['Boolean']>;
+  target?: Maybe<Scalars['String']>;
+  rel?: Maybe<Scalars['String']>;
 };
 
 export type SitePluginPluginOptionsPluginsPluginOptionsFilterInput = {
   maxWidth?: Maybe<IntQueryOperatorInput>;
   quality?: Maybe<IntQueryOperatorInput>;
   linkImagesToOriginal?: Maybe<BooleanQueryOperatorInput>;
+  target?: Maybe<StringQueryOperatorInput>;
+  rel?: Maybe<StringQueryOperatorInput>;
 };
 
 export type SitePluginSortInput = {

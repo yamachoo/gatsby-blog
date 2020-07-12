@@ -61,8 +61,6 @@ hoge
 ***
 hoge
 ___
-hoge
----
 
 ## Lists
 
@@ -92,8 +90,8 @@ hoge
 
 ### 外部参照リンク
 
-[Google]: http://www.yahoo.co.jp
-[Googleを見る][Google]
+[Yahoo]: http://www.yahoo.co.jp
+[Yahooを見る][Yahoo]
 
 ## 強調
 ### em
