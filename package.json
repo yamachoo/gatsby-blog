@@ -9,6 +9,7 @@
     "dev": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
+    "deploy": "gatsby build && firebase deploy",
     "clean": "gatsby clean",
     "type": "tsc --noEmit",
     "lint:ts": "eslint . --ext .ts,.tsx,.js --fix",
