@@ -1,7 +1,8 @@
 export const siteMetadata = {
   title: `Yamablog`,
   description: `@yamachooのブログです。勉強した内容や興味のあること等をアウトプットの一環として発信します。`,
-  author: `@yamachoo`
+  author: `@yamachoo567`,
+  siteUrl: `https://yamablog-d6d42.web.app`
 }
 
 export const plugins = [
@@ -45,8 +46,8 @@ export const plugins = [
       name: `Yamablog`,
       short_name: `Yamablog`,
       start_url: `/`,
-      background_color: `#EFEFEF`,
-      theme_color: `#0F4C81`,
+      background_color: `#eee`,
+      theme_color: `#0f4c81`,
       display: `standalone`,
       icon: `static/images/icon.png`
     }

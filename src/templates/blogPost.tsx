@@ -32,6 +32,7 @@ const BlogPostTemplate: React.FC<IProps> = ({ data, path }) => {
       <SEO
         title={post.frontmatter.title}
         description={post.frontmatter.description}
+        image={post.frontmatter.visual.childImageSharp.fluid.src}
       />
       <article>
         <div className="article__title">
