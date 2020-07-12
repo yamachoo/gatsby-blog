@@ -1,13 +1,26 @@
-const path = require(`path`)
+import path from "path"
+import { GatsbyNode } from "gatsby"
 
 const blogPostTemplate = path.resolve(`./src/templates/blogPost.tsx`)
 
-exports.createPages = async ({
+interface Result {
+  allMarkdownRemark: {
+    edges: {
+      node: {
+        frontmatter: {
+          path: string
+        }
+      }
+    }[]
+  }
+}
+
+export const createPages: GatsbyNode["createPages"] = async ({
   graphql,
   actions: { createPage },
   reporter
 }) => {
-  const contentsResult = await graphql(`
+  const contentsResult = await graphql<Result>(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___created] }
@@ -24,7 +37,7 @@ exports.createPages = async ({
     }
   `)
 
-  if (contentsResult.errors) {
+  if (contentsResult.errors || !contentsResult.data) {
     reporter.panicOnBuild(`Error while running GraphQL query.`)
     return
   }
