@@ -1,0 +1,19 @@
+@import "../../static/styles/variables";
+
+.card {
+  box-shadow: $shadow-dark;
+}
+
+.body {
+  padding: 16px;
+
+  p {
+    color: $color-secondary;
+  }
+
+  h2 {
+    margin: 4px 0 8px;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}

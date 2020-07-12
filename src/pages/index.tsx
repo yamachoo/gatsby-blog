@@ -1,7 +1,10 @@
 import React from "react"
-import { PageProps, Link, graphql } from "gatsby"
+import { PageProps, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Card from "../components/card"
+import { IFluid } from "../components/card"
+import styles from "./index.module.scss"
 
 interface IProps {
   data: {
@@ -15,6 +18,9 @@ interface IProps {
             updated: string
             path: string
             description: string
+            visual: {
+              childImageSharp: IFluid
+            }
           }
         }
       }[]
@@ -31,30 +37,34 @@ const IndexPage: React.FC<IProps & PageProps> = ({ data, path }) => {
   return (
     <Layout sitePath={path}>
       <SEO title={data.site.siteMetadata.title || `HOME`} />
-      {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node.frontmatter.path}>
-            <h2>{node.frontmatter.title}</h2>
-            <p>{node.frontmatter.created}</p>
-            <p>{node.frontmatter.description}</p>
-          </Link>
-        </div>
-      ))}
+      <h2 className={styles.title}>最新記事</h2>
+      <div className={styles.container}>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <Card node={node} key={node.id} />
+        ))}
+      </div>
     </Layout>
   )
 }
 
 export const pageQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(sort: { fields: frontmatter___created, order: DESC }) {
       edges {
         node {
           id
           frontmatter {
             title
-            created(formatString: "YYYY-MM-DD")
+            created(formatString: "YYYY.MM.DD")
             path
             description
+            visual {
+              childImageSharp {
+                fluid(maxWidth: 900, quality: 100) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }
