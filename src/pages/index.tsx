@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { PageProps, Link, graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
@@ -25,10 +25,9 @@ interface IProps {
       }
     }
   }
-  path: string
 }
 
-const IndexPage: React.FC<IProps> = ({ data, path }) => {
+const IndexPage: React.FC<IProps & PageProps> = ({ data, path }) => {
   return (
     <Layout sitePath={path}>
       <SEO title={data.site.siteMetadata.title || `HOME`} />
