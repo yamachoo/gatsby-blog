@@ -43,8 +43,8 @@ export const plugins = [
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Yamablog`,
-      short_name: `Yamablog`,
+      name: siteMetadata.title,
+      short_name: siteMetadata.title,
       start_url: `/`,
       background_color: `#eee`,
       theme_color: `#0f4c81`,
@@ -53,5 +53,13 @@ export const plugins = [
     }
   },
   `gatsby-plugin-offline`,
-  `gatsby-plugin-react-helmet`
+  `gatsby-plugin-react-helmet`,
+  `gatsby-plugin-sitemap`,
+  {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: siteMetadata.siteUrl,
+      stripQueryString: true
+    }
+  }
 ]
