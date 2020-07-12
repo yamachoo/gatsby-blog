@@ -34,14 +34,15 @@ const BlogPostTemplate: React.FC<IProps> = ({ data, path }) => {
         description={post.frontmatter.description}
       />
       <article>
-        <h1>{post.frontmatter.title}</h1>
-        <p>{post.frontmatter.created}</p>
-        <p>{post.frontmatter.updated}</p>
+        <div className="article__title">
+          <p>{post.frontmatter.created}</p>
+          <h1>{post.frontmatter.title}</h1>
+        </div>
         {post.frontmatter.visual?.childImageSharp?.fluid && (
           <Eyecatch fluid={post.frontmatter.visual.childImageSharp.fluid} />
         )}
         <div
-          className="content"
+          className="article__content"
           dangerouslySetInnerHTML={{ __html: post.html }}
         />
       </article>
@@ -55,8 +56,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        created(formatString: "YYYY-MM-DD")
-        updated(formatString: "YYYY-MM-DD")
+        created(formatString: "YYYY.MM.DD")
+        updated(formatString: "YYYY.MM.DD")
         path
         description
         visual {

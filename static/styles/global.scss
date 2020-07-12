@@ -4,45 +4,61 @@
 body {
   font-family: $font;
   color: $color;
-  background: $background-primary;
+  background: $background;
 }
 
-.content p,
-.content table,
-.content blockquote,
-.content address,
-.content pre,
-.content iframe,
-.content form,
-.content figure,
-.content dl,
-.content ul,
-.content ol,
-.content hr {
-  margin-top: 16px;
-  line-height: 1.7;
-}
+.article {
+  &__title {
+    p {
+      color: $color-secondary;
+    }
 
-.content h2 {
-  margin: 36px 0 16px;
-  font-size: 24px;
-  font-weight: 600;
-}
+    h1 {
+      margin: 8px 0 16px;
+      font-size: 28px;
+      font-weight: 600;
+    }
+  }
 
-.content h3 {
-  margin: 20px 0 16px;
-  font-size: 20px;
-  font-weight: 600;
-}
+  &__content {
+    p,
+    table,
+    blockquote,
+    address,
+    pre,
+    iframe,
+    form,
+    figure,
+    dl,
+    ul,
+    ol,
+    hr {
+      margin-top: 16px;
+      line-height: 1.7;
+    }
 
-.content h4,
-.content h5,
-.content h6 {
-  margin: 16px 0 16px;
-  font-size: 16px;
-  font-weight: 600;
-}
+    h2 {
+      margin: 36px 0 16px;
+      font-size: 24px;
+      font-weight: 600;
+    }
 
-.content a {
-  color: $link-color;
+    h3 {
+      margin: 20px 0 16px;
+      font-size: 20px;
+      font-weight: 600;
+    }
+
+    h4,
+    h5,
+    h6 {
+      margin: 16px 0 16px;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    a {
+      color: $link-color;
+    }
+  }
 }
