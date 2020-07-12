@@ -40,12 +40,6 @@ export const plugins = [
   `gatsby-plugin-sass`,
   `gatsby-plugin-sharp`,
   {
-    resolve: `gatsby-plugin-graphql-codegen`,
-    options: {
-      fileName: `types/graphql-types.d.ts`
-    }
-  },
-  {
     resolve: `gatsby-plugin-manifest`,
     options: {
       name: `Yamablog`,
