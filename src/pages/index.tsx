@@ -37,7 +37,7 @@ const IndexPage: React.FC<IProps & PageProps> = ({ data, path }) => {
   return (
     <Layout sitePath={path}>
       <SEO title={data.site.siteMetadata.title || `HOME`} />
-      <h2 className={styles.title}>最新記事</h2>
+      <h2 className={styles.title}>Latest Posts</h2>
       <div className={styles.container}>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <Card node={node} key={node.id} />
