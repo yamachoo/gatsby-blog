@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import styles from "./footer.module.scss"
 
 const Footer: React.FC = () => (
@@ -22,6 +23,9 @@ const Footer: React.FC = () => (
       >
         @yamachoo
       </a>
+    </p>
+    <p>
+      <Link to="/privacy">Privacy policy</Link>
     </p>
   </footer>
 )
