@@ -60,7 +60,7 @@ const SEO: React.FC<IProps> = ({ description, meta, title, image }) => {
         },
         {
           property: `og:image`,
-          content: image ? `${siteUrl}${image}` : keyvisual
+          content: image ? `${siteUrl}${image}` : `${siteUrl}${keyvisual}`
         },
         {
           name: `twitter:card`,
