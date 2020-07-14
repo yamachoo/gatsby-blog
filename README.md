@@ -15,8 +15,10 @@ $ yarn dev
 - [x] SCSS
 - [x] gatsby-image
 - [x] prism
-- [ ] SEO
+- [x] SEO
 - [ ] analytics
+- [ ] adsense
+- [ ] tag
 - [ ] dark mode
 - [ ] ToC
 - [ ] MDX
