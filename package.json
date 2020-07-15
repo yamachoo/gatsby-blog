@@ -2,8 +2,7 @@
   "name": "gatsby-blog",
   "private": true,
   "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.3.0",
-  "license": "MIT",
+  "version": "0.5.0",
   "scripts": {
     "start": "gatsby develop",
     "dev": "gatsby develop",
