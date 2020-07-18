@@ -1,5 +1,7 @@
 # gatsby-blog
 
+website: https://yamachoo.com/
+
 ## dev
 
 ```sh
