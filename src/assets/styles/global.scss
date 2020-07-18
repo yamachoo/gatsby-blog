@@ -57,8 +57,48 @@ body {
       font-weight: 600;
     }
 
+    ul,
+    ol {
+      padding-left: 24px;
+      margin: 24px 0;
+    }
+
+    ul {
+      list-style-type: disc;
+    }
+
+    ol {
+      list-style-type: decimal;
+    }
+
+    ul ul,
+    ol ol {
+      margin: 0;
+    }
+
+    hr {
+      border-color: $border-color;
+    }
+
     a {
       color: $link-color;
+    }
+
+    table {
+      display: block;
+      overflow-x: scroll;
+      border-collapse: collapse;
+
+      td,
+      th {
+        border: 1px solid $border-color;
+        padding: 8px 12px;
+      }
+
+      th {
+        background: $background;
+        font-weight: 400;
+      }
     }
   }
 }

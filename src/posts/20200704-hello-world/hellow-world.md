@@ -68,8 +68,6 @@ ___
 
 - リスト1
     - リスト1_1
-        - リスト1_1_1
-        - リスト1_1_2
     - リスト1_2
 - リスト2
 - リスト3
@@ -82,7 +80,7 @@ ___
 1. 番号付きリスト2
 1. 番号付きリスト3
 
-# Span Elements
+## Span Elements
 
 ## Link リンク
 
@@ -115,8 +113,8 @@ ___
 
 ## Table 表
 
-| TH1 | TH2 |
-----|----
+| HTML | CSS | JavaScript | PHP | RUby | Python |
+----|----|----|----|----|----|----
 | TD1 | TD3 |
 | TD2 | TD4 |
 
@@ -126,5 +124,10 @@ ___
 |4 |5 |6 |
 
 ```js:title=example-file.js
+alert('how cool is this!');
+
+alert('how cool is this!');
+alert('how cool is this!');
+
 alert('how cool is this!');
 ```
