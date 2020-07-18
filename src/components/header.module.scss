@@ -30,6 +30,7 @@
   margin-bottom: 2px;
   font-family: $font-strong;
   font-size: 24px;
+  font-weight: 600;
 
   @include mq() {
     font-size: 32px;
