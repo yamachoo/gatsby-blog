@@ -12,8 +12,8 @@ const Layout: React.FC<ISitePath> = ({ children, sitePath }) => {
       <Header sitePath={sitePath} />
       <div className={styles.content}>
         <Main>{children}</Main>
+        <AdSense className={styles.adsense} />
       </div>
-      <AdSense />
       <Footer />
     </div>
   )
