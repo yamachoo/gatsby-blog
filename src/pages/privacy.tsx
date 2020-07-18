@@ -1,10 +1,12 @@
 import React from "react"
 import { PageProps } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 
 const PrivacyPage: React.FC<PageProps> = ({ path }) => {
   return (
     <Layout sitePath={path}>
+      <SEO title="Privacy policy" />
       <div className="article__title">
         <p>2020.07.13</p>
         <h1>Privacy policy</h1>
@@ -24,7 +26,7 @@ const PrivacyPage: React.FC<PageProps> = ({ path }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            こちら
+            Googleアドセンス オンライン利用規約
           </a>
           をご覧ください。
         </p>
@@ -38,9 +40,9 @@ const PrivacyPage: React.FC<PageProps> = ({ path }) => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            ここをクリック
+            Google アナリティクス利用規約
           </a>
-          してください。
+          をご覧ください。
         </p>
         <h3>当サイトへのリンクに関して</h3>
         <p>
