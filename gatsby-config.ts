@@ -2,7 +2,7 @@ export const siteMetadata = {
   title: `Yamablog`,
   description: `@yamachooのブログです。勉強した内容や興味のあること等をアウトプットの一環として発信します。`,
   author: `@yamachoo567`,
-  siteUrl: `https://yamablog-d6d42.web.app`
+  siteUrl: `https://yamachoo.com`
 }
 
 export const plugins = [
@@ -60,6 +60,13 @@ export const plugins = [
     options: {
       siteUrl: siteMetadata.siteUrl,
       stripQueryString: true
+    }
+  },
+  {
+    resolve: `gatsby-plugin-google-analytics`,
+    options: {
+      trackingId: `UA-133288356-1`,
+      head: true
     }
   }
 ]

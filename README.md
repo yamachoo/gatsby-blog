@@ -16,7 +16,7 @@ $ yarn dev
 - [x] gatsby-image
 - [x] prism
 - [x] SEO
-- [ ] analytics
+- [x] analytics
 - [ ] adsense
 - [ ] tag
 - [ ] dark mode
