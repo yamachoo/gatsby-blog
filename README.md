@@ -19,7 +19,7 @@ $ yarn dev
 - [x] prism
 - [x] SEO
 - [x] analytics
-- [ ] adsense
+- [x] adsense
 - [ ] tag
 - [ ] dark mode
 - [ ] ToC
