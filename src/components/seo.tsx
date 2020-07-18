@@ -1,7 +1,7 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
-import keyvisual from "../../static/images/keyvisual.png"
+import keyvisual from "../assets/images/keyvisual.png"
 
 interface IProps {
   description?: string

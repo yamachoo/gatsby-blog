@@ -49,7 +49,7 @@ export const plugins = [
       background_color: `#eee`,
       theme_color: `#0f4c81`,
       display: `standalone`,
-      icon: `static/images/icon.png`
+      icon: `src/assets/images/icon.png`
     }
   },
   `gatsby-plugin-offline`,

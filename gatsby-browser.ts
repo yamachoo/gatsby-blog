@@ -1,3 +1,3 @@
-import "./static/styles/global.scss"
+import "./src/assets/styles/global.scss"
 import "prismjs/themes/prism-tomorrow.css"
-import "./static/styles/code.scss"
+import "./src/assets/styles/code.scss"

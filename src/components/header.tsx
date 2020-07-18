@@ -1,8 +1,8 @@
 import React from "react"
 import { Link } from "gatsby"
 import styles from "./header.module.scss"
-import twitter from "../../static/images/twitter_outline.svg"
-import github from "../../static/images/github_outline.svg"
+import twitter from "../assets/images/twitter_outline.svg"
+import github from "../assets/images/github_outline.svg"
 
 export interface ISitePath {
   sitePath: string
