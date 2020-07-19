@@ -37,6 +37,21 @@ body {
       line-height: 1.7;
     }
 
+    blockquote {
+      border-left: 5px solid $border-color;
+      color: $color-secondary;
+      padding: 16px 0 16px 16px;
+      margin: 24px 0;
+
+      p {
+        margin: 0;
+      }
+
+      blockquote {
+        margin: 16px 0 0;
+      }
+    }
+
     h2 {
       margin: 36px 0 16px;
       font-size: 24px;
@@ -61,6 +76,15 @@ body {
     ol {
       padding-left: 24px;
       margin: 24px 0;
+
+      p {
+        margin: 0;
+      }
+
+      ul,
+      ol {
+        margin: 0;
+      }
     }
 
     ul {
@@ -69,11 +93,6 @@ body {
 
     ol {
       list-style-type: decimal;
-    }
-
-    ul ul,
-    ol ol {
-      margin: 0;
     }
 
     hr {
