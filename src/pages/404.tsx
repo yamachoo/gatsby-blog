@@ -12,7 +12,8 @@ const Error404Page: React.FC<PageProps> = ({ path }) => {
       </div>
       <div className="article__content">
         <p>
-          お探しのページは見つかりませんでした。<br />
+          お探しのページは見つかりませんでした。
+          <br />
           一時的にアクセスできない状態か、移動もしくは削除された可能性があります。
         </p>
       </div>
