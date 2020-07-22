@@ -14,7 +14,7 @@
     "lint:ts": "eslint . --ext .ts,.tsx,.js --fix",
     "lint:scss": "stylelint ./**/*.scss --fix",
     "lint": "yarn lint:ts && yarn lint:scss",
-    "new-blog": "ts-node util/createNewBlog.ts"
+    "new-blog": "ts-node utils/createNewBlog.ts"
   },
   "dependencies": {
     "dayjs": "^1.8.29",
