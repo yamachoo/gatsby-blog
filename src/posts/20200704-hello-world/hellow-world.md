@@ -4,7 +4,7 @@ created: "2020-07-04"
 updated: "2020-07-10"
 path: /hello-world
 description: "Hello World!"
-visual: "./sample.jpg"
+visual: "./sample.png"
 ---
 
 ## Block Elements
@@ -109,7 +109,7 @@ ___
 
 ## Images 画像
 
-![サンプル](./sample.jpg)
+![サンプル](./sample.png)
 
 ## Table 表
 
