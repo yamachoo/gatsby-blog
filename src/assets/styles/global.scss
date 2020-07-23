@@ -15,8 +15,12 @@ body {
 
     h1 {
       margin: 8px 0 16px;
-      font-size: 28px;
+      font-size: 20px;
       font-weight: 600;
+
+      @include mq() {
+        font-size: 28px;
+      }
     }
   }
 
@@ -34,7 +38,7 @@ body {
     ol,
     hr {
       margin-top: 16px;
-      line-height: 1.7;
+      line-height: 1.9;
     }
 
     blockquote {
@@ -53,15 +57,27 @@ body {
     }
 
     h2 {
+      padding: 8px 16px;
       margin: 36px 0 16px;
-      font-size: 24px;
+      font-size: 20px;
       font-weight: 600;
+      border-left: solid 5px $theme-color;
+
+      @include mq() {
+        font-size: 24px;
+      }
     }
 
     h3 {
+      padding-bottom: 6px;
       margin: 20px 0 16px;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
+      border-bottom: 1px solid $border-color;
+
+      @include mq() {
+        font-size: 20px;
+      }
     }
 
     h4,
