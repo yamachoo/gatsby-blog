@@ -39,6 +39,11 @@ body {
     hr {
       margin-top: 16px;
       line-height: 1.9;
+      font-size: 0.9rem;
+
+      @include mq() {
+        font-size: 16px;
+      }
     }
 
     blockquote {
