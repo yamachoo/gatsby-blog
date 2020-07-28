@@ -38,8 +38,8 @@ body {
     ol,
     hr {
       margin-top: 16px;
-      line-height: 1.9;
       font-size: 0.9rem;
+      line-height: 1.9;
 
       @include mq() {
         font-size: 16px;
