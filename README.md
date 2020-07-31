@@ -16,11 +16,15 @@ $ yarn dev
 - [ ] design
 - [x] SCSS
 - [x] gatsby-image
+- [ ] image responsive
 - [x] prism
 - [x] SEO
 - [x] analytics
 - [x] adsense
+- [ ] sns share btn
 - [ ] tag
+- [ ] pagination
+- [ ] popular articles
 - [ ] dark mode
 - [ ] ToC
 - [ ] MDX
