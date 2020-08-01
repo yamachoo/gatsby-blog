@@ -24,7 +24,8 @@ export const plugins = [
           resolve: `gatsby-remark-images`,
           options: {
             maxWidth: 900,
-            quality: 100,
+            quality: 90,
+            withWebp: true,
             linkImagesToOriginal: false
           }
         },
