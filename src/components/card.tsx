@@ -30,7 +30,7 @@ const Card: React.FC<INode> = ({ node }) => (
       <Img fluid={node.frontmatter.visual.childImageSharp.fluid} />
       <div className={styles.body}>
         <p>{node.frontmatter.created}</p>
-        <h2>{node.frontmatter.title}</h2>
+        <h3>{node.frontmatter.title}</h3>
         <p>{node.frontmatter.description}</p>
       </div>
     </Link>

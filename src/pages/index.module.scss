@@ -5,8 +5,7 @@
   margin-bottom: 16px;
   font-size: 24px;
   font-weight: 600;
-  color: $outline-color;
-  background-color: $theme-color;
+  border-left: solid 5px $theme-color;
 }
 
 .container {
