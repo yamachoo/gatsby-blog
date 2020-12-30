@@ -1,11 +1,11 @@
 import React from "react"
 import { PageProps } from "gatsby"
-import Layout from "../components/layout"
+import Error404Layout from "../components/404Layout"
 import SEO from "../components/seo"
 
 const Error404Page: React.FC<PageProps> = ({ path }) => {
   return (
-    <Layout sitePath={path}>
+    <Error404Layout sitePath={path}>
       <SEO title="404" />
       <div className="article__title">
         <h1>404 Not Found</h1>
@@ -17,7 +17,7 @@ const Error404Page: React.FC<PageProps> = ({ path }) => {
           一時的にアクセスできない状態か、移動もしくは削除された可能性があります。
         </p>
       </div>
-    </Layout>
+    </Error404Layout>
   )
 }
 

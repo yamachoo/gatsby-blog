@@ -1,0 +1,16 @@
+@import "../assets/styles/variables";
+
+.layout {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+  margin: 0 auto;
+}
+
+.adsense {
+  margin-top: 32px;
+}
